@@ -1,0 +1,35 @@
+<o> Links of the pages available<o><br>
+   <nav>
+ <a href="/store">store</a><br>
+<a href="/store/cars">Cars</a><br>
+<a href="/store/tv">TV</a><br>
+<a href="/store/nailpolish">Nailpolish</a><br><br><br>
+</nav>
+<h1>AUDI CAR DETAILS</h1>
+
+<ul>
+     <%  var date = new Date();%>
+    <% for (var i = 0; i < audi.length; i++) { %>
+    	 <li>Name - <%= audi[i].name %></li>
+        <li>Model - <%= audi[i].model %></li>
+        <li>Year of Manufacture - <%= audi[i].yearman %></li>
+        <li>Description - <%= audi[i].description %></li>
+        <li>Cost - <%= audi[i].price %></li>
+        <li>HorsePower - <%= audi[i].horsepower %></li><br>
+        <li>Start Date - <%= audi[i].StartDate %></li><br>
+        <li>End Date - <%= audi[i].EndDate %></li><br>
+        <img src="/images/car/<%=audi[i].image %>" 
+        </ul>
+        <%if ((audi[i].StartDate < date) && (audi[i].EndDate > date)){%>
+        <a href="http://localhost:8080/dbconn/Login.jsp?id=<%= audi[0]._id %>&coll=audi">BUY NOW!</a>
+        <% } else { %>
+<a href="/store">Item Not Available</a></h2>
+  
+<% } %>
+<br>
+ <% } %>     
+
+
+
+
+

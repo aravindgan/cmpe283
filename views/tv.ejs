@@ -1,0 +1,29 @@
+
+  <body>
+    <div class="heo">
+     <o> Links of the pages available<o>
+   <nav>
+ <a href="/store">store</a><br>
+<a href="/store/cars">Cars</a><br>
+<a href="/store/tv">TV</a><br>
+<a href="/store/nailpolish">Nailpolish</a><br><br><br>
+</nav>
+ <section class="layout">
+      <ul class="nav">
+      <o> TV AVAILABLE IN OUR STORE - <o><br><br>
+     <ul>
+       <% for (var i = 0; i < tv.length; i++) { %>
+    	
+        <li> <a href="/store/tv/lg"><img src="/images/tv/<%=tv[i].image1 %>"alt="my tv"><br>LG SMART TV</li> <br>
+        <li> <a href="/store/tv/philips"> <img src="/images/tv/<%=tv[i].image2 %>" alt="my tv1"><br>PHILIPS SMART TV</li> <br>
+        <li> <a href="/store/tv/samsung"> <img src="/images/tv/<%=tv[i].image3 %>" alt="my tv2"><br>SAMSUNG LED TV</li><br>
+        <li> <a href="/store/tv/sony"> <img src="/images/tv/<%=tv[i].image4 %>" alt="my tv3"><br>SONY SMART TV</li>  <br>
+      <% } %>    
+  
+</ul>
+       
+      </ul>
+ </section>
+</div>
+  </body>
+</html>

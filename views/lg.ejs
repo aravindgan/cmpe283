@@ -1,0 +1,31 @@
+<o> Links of the pages available<o>
+   <nav>
+ <a href="/store">store</a><br>
+<a href="/store/cars">Cars</a><br>
+<a href="/store/tv">TV</a><br>
+<a href="/store/nailpolish">Nailpolish</a><br><br><br>
+</nav>
+<h1>LG TV details</h1>
+
+<ul>
+	<%  var date = new Date();%>
+    <% for (var i = 0; i < lg.length; i++) { %>
+        <li>Brand - <%= lg[i].name %></li>
+        <li>Diagonal Length - <%= lg[i].dia %></li>
+        <li>Width - <%= lg[i].width %></li> 
+        <li>Price - <%= lg[i].price %></li>
+        <li>Warranty Period - <%= lg[i].warr %></li>
+        <li>Description - <%= lg[i].description %></li><br>
+        <li>Start Date - <%= lg[i].StartDate %></li><br>
+        <li>End Date - <%= lg[i].EndDate %></li><br>
+        <img src="/images/TV/<%=lg[i].image %>"
+        </ul>
+         <%if ((lg[i].StartDate < date) && (lg[i].EndDate > date)){%>
+        <a href="http://localhost:8080/dbconn/Login.jsp?id=<%= lg[0]._id %>&coll=lg">BUY NOW!</a>
+        <% } else { %>
+<a href="/store">Item Not Available</a></h2>
+  
+<% } %>
+<br>
+    <% } %>
+

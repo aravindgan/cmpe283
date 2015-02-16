@@ -1,0 +1,30 @@
+<o> Links of the pages available<o><br>
+   <nav>
+ <a href="/store">store</a><br>
+<a href="/store/cars">Cars</a><br>
+<a href="/store/tv">TV</a><br>
+<a href="/store/nailpolish">Nailpolish</a><br><br><br>
+</nav>
+<h1>BMW CAR DETAILS</h1>
+
+<ul>
+    <%  var date = new Date();%>
+    <% for (var i = 0; i < bmw.length; i++) { %>
+        <li>Name - <%= bmw[i].name %></li>
+        <li>Model - <%= bmw[i].model %></li>
+        <li>Engine - <%= bmw[i].engine %></li>
+        <li>Description - <%= bmw[i].description %></li>
+        <li>Cost - <%= bmw[i].price %></li><br>
+        <li>Start Date - <%= bmw[i].StartDate %></li><br>
+        <li>End Date - <%= bmw[i].EndDate %></li><br>
+         <li> <img src="/images/car/<%=bmw[i].image %>"</li>
+         </ul>
+         <%if ((bmw[i].StartDate < date) && (bmw[i].EndDate > date)){%>
+         <a href="http://localhost:8080/dbconn/Login.jsp?id=<%= bmw[0]._id %>&coll=bmw">BUY NOW!</a>
+         <% } else { %>
+<a href="/store">Item Not Available!</a></h2>
+  
+<% } %>
+<br>
+    <% } %>
+

@@ -1,0 +1,31 @@
+<o> Links of the pages available<o><br>
+   <nav>
+ <a href="/store">store</a><br>
+<a href="/store/cars">Cars</a><br>
+<a href="/store/tv">TV</a><br>
+<a href="/store/nailpolish">Nailpolish</a><br><br><br>
+</nav>
+<h1>CHEVROLET CAR DETAILS</h1>
+<ul>
+	<%  var date = new Date();%>
+    <% for (var i = 0; i < chevrolet.length; i++) { %>
+        <li>Name - <%= chevrolet[i].name %></li>
+        <li>Model - <%= chevrolet[i].model %></li>
+        <li>Transmission - <%= chevrolet[i].transmission %></li> 
+        <li>Engine - <%= chevrolet[i].engine %></li>
+        <li>Price - <%= chevrolet[i].price %></li>
+        <li>Horsepower - <%= chevrolet[i].horsepower %></li>
+        <li>Description - <%= chevrolet[i].description %></li><br>
+        <li>Start Date - <%= chevrolet[i].StartDate %></li><br>
+        <li>End Date - <%= chevrolet[i].EndDate %></li><br>
+        <li><img src ="/images/car/<%=chevrolet[i].image %>" </li>
+        </ul>
+        <%if ((chevrolet[i].StartDate < date) && (chevrolet[i].EndDate > date)){%>
+        <a href="http://localhost:8080/dbconn/Login.jsp?id=<%= chevrolet[0]._id %>&coll=chevrolet">BUY NOW!</a>
+        <% } else { %>
+<a href="/store">Item Not Available</a></h2>
+  
+<% } %>
+<br>
+    <% } %>
+

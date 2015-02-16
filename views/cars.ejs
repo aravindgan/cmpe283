@@ -1,0 +1,28 @@
+
+  <body>
+    <div class="heo">
+    <o> Links of the pages available<o><br>
+   <nav>
+ <a href="/store">store</a><br>
+<a href="/store/cars">Cars</a><br>
+<a href="/store/tv">TV</a><br>
+<a href="/store/nailpolish">Nailpolish</a><br><br><br>
+</nav>
+ <section class="layout">
+      <ul class="nav">
+      <o> THE CARS AVAILABLE IN OUR STORE - <o><br><br>
+      <ul>
+       <% for (var i = 0; i < cars.length; i++) { %>
+    	
+        <li> <a href="/store/cars/chevrolet"><img src="/images/car/<%=cars[i].image3 %>"alt="my car"><br> CHEVROLET</li> <br>
+        <li> <a href="/store/cars/bmw"> <img src="/images/car/<%=cars[i].image1 %>" alt="my car1"><br> BMW</li> <br>
+        <li> <a href="/store/cars/toyota"> <img src="/images/car/<%=cars[i].image4 %>" alt="my car2"><br> TOYOTA</li><br>
+        <li> <a href="/store/cars/audi"> <img src="/images/car/<%=cars[i].image %>" alt="my car3"><br> AUDI</li> <br> 
+      <% } %>    
+  
+</ul>
+   
+ </section>
+</div>
+  </body>
+</html>

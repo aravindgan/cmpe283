@@ -1,0 +1,28 @@
+<o> Links of the pages available<o>
+   <nav>
+ <a href="/store">store</a><br>
+<a href="/store/cars">Cars</a><br>
+<a href="/store/tv">TV</a><br>
+<a href="/store/nailpolish">Nailpolish</a><br><br><br>
+</nav>
+<h1>Maybelline Nail polish details</h1>
+
+<ul>
+	<%  var date = new Date();%>
+    <% for (var i = 0; i < maybelline.length; i++) { %>
+        <li>Brand - <%= maybelline[i].name %></li>
+        <li>Type - <%= maybelline[i].type %></li> 
+        <li>Price - <%= maybelline[i].price %></li>
+        <li>Description - <%= maybelline[i].description %></li><br>
+        <li>Start Date - <%= maybelline[i].StartDate %></li><br>
+        <li>End Date - <%= maybelline[i].EndDate %></li><br>
+        <img src="/images/nailpolish/<%=maybelline[i].image %>"
+        </ul>
+        <%if ((maybelline[i].StartDate < date) && (maybelline[i].EndDate > date)){%>
+<a href="http://localhost:8080/dbconn/Login.jsp?id=<%= maybelline[0]._id %>&coll=maybelline">BUY NOW!</a>
+<% } else { %>
+<a href="/store">Item Not Available</a></h2>
+  
+<% } %>
+<br>
+    <% } %>
